@@ -1,0 +1,45 @@
+@import "../../shared/sass/imports"
+
+.form
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  &-wrap
+    height: 100vh
+    .container
+      height: 100%
+  &__block
+    position: relative
+    width: 632px
+    padding: 100px
+    text-align: center
+    box-shadow: $shadow
+    border-radius: 10px
+  &__close
+    +btn
+    $zise: 30px
+    position: absolute
+    top: 40px
+    right: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: $zise
+    height: $zise
+    padding: 0
+    &:hover
+      span
+        background-color: darken(#acacac, 20)
+    span
+      position: absolute
+      display: inline-block
+      width: 35px
+      height: 4px
+      border-radius: 2px
+      background-color: #acacac
+      transition: $transition
+      &:first-of-type
+        transform: rotate(45deg)
+      &:last-of-type
+        transform: rotate(-45deg)

@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["Shared"],"mappings":";;;;IAAAA,M,GACA,kBAAA;AAAA;AAAA,C","file":"script.js","sourcesContent":["class Shared {\n    constructor() {}\n}"]}

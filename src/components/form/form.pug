@@ -1,0 +1,11 @@
+mixin form()
+  section.form-wrap
+    .container
+      +b.form
+        //button.btn.btn-primary Открыть форму
+        +e.block
+          +e('button').close
+            span
+            span
+          +e('form').main
+            h2.title Заполните форму
