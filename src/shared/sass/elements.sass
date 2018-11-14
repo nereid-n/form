@@ -3,3 +3,19 @@
 .title
   font-size: 30px
   font-weight: 700
+
+.fade
+  bottom: 110%
+  opacity: 1 !important
+  transition: $transition
+
+.show
+  bottom: 50%
+  transition: $transition
+  transform: translateY(50%)
+
+
+@media (max-width: $md)
+  .table-wrap
+    max-width: 100%
+    overflow-x: scroll

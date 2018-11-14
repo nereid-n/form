@@ -1,1 +1,26 @@
 @import "imports"
+
+=input-text($color: $gray)
+  color: $color
+  font-size: 21px
+  letter-spacing: 0.47px
+  @media (max-width: $sm)
+    font-size: 18px
+
+input
+  +input-text($main)
+  margin-bottom: 25px
+  padding: 20px 40px
+  border: 1px solid #e8e8e8
+  border-radius: 35px
+  box-shadow: 0 0 59px rgba(40, 40, 40, 0.05)
+  &::placeholder
+    +input-text
+  &:focus
+    border: 1px solid #62bafb
+
+.input-success
+  border: 1px solid $success
+
+.input-err
+  border: 1px solid $err

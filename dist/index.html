@@ -18,15 +18,54 @@
       </header>
       <main class="main">
         <section class="form-wrap">
+          <div class="stars">
+            <div class="stars1"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+          </div>
           <div class="container">
-            <div class="form">
-              <!--button.btn.btn-primary Открыть форму-->
-              <div class="form__block">
-                <button class="form__close"><span></span><span></span>
+            <div class="form"><img class="load d-none" src="assets/images/load.gif" alt=""/>
+              <button class="position-absolute btn btn-primary js-open-form show">Открыть форму</button>
+              <div class="form__block form__main fade">
+                <button class="form__close js-close-form"><span></span><span></span>
                 </button>
-                <form class="form__main">
-                  <h2 class="title">Заполните форму</h2>
+                <form class="form__main-content">
+                  <h2 class="title mb30">Ваши данные</h2>
+                  <input class="input" type="name" placeholder="Ваше имя*" name="name"/>
+                  <input class="input" type="tel" placeholder="Номер телефона*" name="phone"/>
+                  <input class="input" type="email" placeholder="E-mail*" name="email"/>
+                  <button class="btn btn-primary js-send" type="submit">Отправить</button>
                 </form>
+              </div>
+              <div class="form__block form__err-block fade">
+                <button class="form__close js-close-err"><span></span><span></span>
+                </button>
+                <div class="d-flex flex-column align-items-center">
+                  <h2 class="title mb-0">Ошибка ввода</h2>
+                  <div class="form__err"><img src="assets/images/checked.png" alt=""/>
+                  </div>
+                  <p class="form__text-err mb-0">Вы ввели не верные данные <br>вернитесь и заполните форму верно
+                  </p>
+                </div>
+              </div>
+              <div class="form__block form__table fade fade">
+                <div class="table-wrap">
+                  <table class="table text-left">
+                    <tr>
+                      <td>Ваше имя</td>
+                      <td class="res res-name"></td>
+                    </tr>
+                    <tr>
+                      <td>Номер телефона</td>
+                      <td class="res res-phone"></td>
+                    </tr>
+                    <tr>
+                      <td>E-mail</td>
+                      <td class="res res-email"></td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="btn btn-primary mt30 js-restart">Сначала</button>
               </div>
             </div>
           </div>
@@ -40,6 +79,7 @@
       </footer>
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
+    <script src="assets/libs/jquery.maskedinput.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

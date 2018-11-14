@@ -1,11 +1,42 @@
 mixin form()
   section.form-wrap
+    .stars
+      .stars1
+      .stars2
+      .stars3
     .container
       +b.form
-        //button.btn.btn-primary Открыть форму
-        +e.block
-          +e('button').close
+        img.load.d-none(src='assets/images/load.gif' alt='')
+        button.position-absolute.btn.btn-primary.js-open-form.show Открыть форму
+        +e.block.__main.fade
+          +e('button').close.js-close-form
             span
             span
-          +e('form').main
-            h2.title Заполните форму
+          +e('form').main-content
+            h2.title.mb30 Ваши данные
+            input.input(type='name' placeholder='Ваше имя*' name='name')
+            input.input(type='tel' placeholder='Номер телефона*' name='phone')
+            input.input(type='email' placeholder='E-mail*' name='email')
+            button(type='submit').btn.btn-primary.js-send Отправить
+        +e.block.__err-block.fade
+          +e('button').close.js-close-err
+            span
+            span
+          .d-flex.flex-column.align-items-center
+            h2.title.mb-0 Ошибка ввода
+            +e.err
+              img(src='assets/images/checked.png' alt='')
+            +e('p').text-err.mb-0 Вы ввели не верные данные <br>вернитесь и заполните форму верно
+        +e.block.__table.fade.fade
+          .table-wrap
+            table.table.text-left
+              tr
+                td Ваше имя
+                td.res.res-name
+              tr
+                td Номер телефона
+                td.res.res-phone
+              tr
+                td E-mail
+                td.res.res-email
+          button.btn.btn-primary.mt30.js-restart Сначала
